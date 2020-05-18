@@ -1,12 +1,19 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
+    id 'war'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+bootWar{                        //bootWar Task시 이름 지정
+    archiveBaseName="springproject"
+    archiveVersion="0.0.1-SNAPSHOT"
+}
 
 configurations {
     compileOnly {
