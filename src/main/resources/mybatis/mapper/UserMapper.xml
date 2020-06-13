@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.amitie.mapper.UserMapper">
+    <select id="selectAllUser" resultType="com.project.amitie.dto.UserDTO">
+        SELECT user_id             AS userID,
+               user_name           AS userName,
+               user_password       AS userPassword,
+               school,
+               major,
+               image_url           AS imageUrl,
+               image_file_name     AS imageFileName,
+               thumbnail_url       AS thumbnailUrl,
+               thumbnail_file_name AS thumbnailFileName
+        FROM   users;
+    </select>
+
+</mapper>
