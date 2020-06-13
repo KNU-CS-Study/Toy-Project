@@ -1,4 +1,4 @@
-package com.example.amitie;
+package com.project.amitie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
