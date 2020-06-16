@@ -1,4 +1,4 @@
-package com.project.amitie.DTO;
+package com.project.amitie.dto;
 
 import lombok.Data;
 
