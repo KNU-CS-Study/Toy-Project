@@ -1,7 +1,8 @@
 package com.project.amitie.mapper;
 
-import com.project.amitie.DTO.UserDTO;
+import com.project.amitie.dto.UserDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,5 +11,8 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    List<UserDTO> selectAllUser();
+    @Select("SELECT user_name AS userName FROM   users")
+    List<String> selectAllUserName();
+
+    List<String> selectAllUser();
 }
