@@ -1,13 +1,11 @@
 spring:
   profiles:
-    active: local # 기본 환경 선택
+    active: dev # 기본 환경 선택
 
-
-
---- # local 환경
+--- # dev 환경
 
 spring:
-  profiles: local
+  profiles: dev
 
   datasource:
     url: jdbc:mysql://localhost:3306/amitie_db?serverTimezone=UTC&characterEncoding=utf8
@@ -27,17 +25,4 @@ logging:
     org.springframework.web: DEBUG
     com.zaxxer.hikari.HikariDataSource: warn
 
---- # 운영 환경
-spring:
-  profiles: release
-
-  datasource:
-    url: jdbc:mysql://35.192.69.214:3306/amitie_db?serverTimezone=UTC&characterEncoding=utf8
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: dongwook
-    password: dongwook
-
-    mybatis:
-      type-aliases-package: com.project.amitie.mapper
-      mapper-locations: mybatis/mapper/**/*.xml
 
