@@ -26,6 +26,6 @@ public class HelloController {
             result += ("users : "+users.get(i)+"\n");
             log.debug("users : "+users.get(i));
         }
-        return users.get(0);
+        return result;
     }
 }
