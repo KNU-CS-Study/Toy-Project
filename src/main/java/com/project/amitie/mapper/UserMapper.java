@@ -11,8 +11,10 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    @Select("SELECT user_name AS userName FROM   users")
-    List<String> selectAllUserName();
+    public List<UserDTO> selectUserByID();
 
-    List<String> selectAllUser();
+    @Select("SELECT * FROM   users")
+    public List<UserDTO> selectAllUser();
+
+
 }
