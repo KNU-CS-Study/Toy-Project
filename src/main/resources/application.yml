@@ -15,9 +15,9 @@ spring:
     username: dongwook
     password: dongwook
 
-  mybatis:
-    type-aliases-package: com.project.amitie.mapper
-    mapper-locations: mybatis/mapper/**/*.xml
+mybatis:
+  type-aliases-package: com.project.amitie.mapper
+  mapper-locations: mybatis/mapper/**/*.xml
 
 
 # SQL Log 볼 때 사용하는 옵션
@@ -37,7 +37,7 @@ spring:
     username: dongwook
     password: dongwook
 
-    mybatis:
-      type-aliases-package: com.project.amitie.mapper
-      mapper-locations: mybatis/mapper/**/*.xml
+mybatis:
+  type-aliases-package: com.project.amitie.mapper
+  mapper-locations: mybatis/mapper/**/*.xml
 

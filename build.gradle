@@ -28,12 +28,16 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+    implementation 'org.mybatis:mybatis-spring'
+    implementation 'org.mybatis:mybatis'
     compileOnly 'org.projectlombok:lombok:1.18.6'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4:1.16'
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
 //    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.slf4j:slf4j-api'
 
