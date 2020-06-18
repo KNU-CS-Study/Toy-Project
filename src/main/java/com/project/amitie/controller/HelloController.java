@@ -20,11 +20,11 @@ public class HelloController {
     public String hello(){
         log.info("hello Controller!!!!");
 
-        List<String> users = userService.getUserList();
+        List<UserDTO> users = userService.getUserList();
         String result ="";
         for(int i=0;i<users.size();i++){
-            result += ("users : "+users.get(i)+"\n");
-            log.debug("users : "+users.get(i));
+            result += ("users : "+users.get(i).toString()+" \n");
+            log.debug("users : "+users.get(i).toString());
         }
         return result;
     }
