@@ -5,21 +5,20 @@ import com.project.amitie.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
 @Slf4j
-public class HelloController {
+public class MainController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping("/hello")
-    public String hello(){
-        log.info("hello Controller!!!!");
+    @GetMapping("/main")
+    public String login(){
+        log.info("Main Controller!!!!");
 
         List<UserDTO> users = userService.getUserList();
         //String result ="";
@@ -27,11 +26,11 @@ public class HelloController {
             //result += ("users : "+users.get(i).toString()+" \n");
             log.debug("users : "+users.get(i).toString());
         }
-        return "hello";
+        return "main";
     }
 
-    @GetMapping("/my")
-    public String my(){
-        return "my";
+    @GetMapping("/join")
+    public String join(){
+        return "join";
     }
 }
